@@ -1,0 +1,11 @@
+<div *ngIf="weather" class="weather-card">
+    <div class="card">
+      <h2>{{ weather.location.name }}</h2>
+      <img *ngIf="weather.current.condition.icon" [src]="weather.current.condition.icon" alt="weather icon">
+      <p>{{ weather.current.condition.text }}</p>
+      <p>Temperature: {{ weather.current.temp_c }}°C</p>
+      <p>Humidity: {{ weather.current.humidity }}%</p>
+      <p>Wind: {{ weather.current.wind_kph }} kph</p>
+    </div>
+  </div>
+  
